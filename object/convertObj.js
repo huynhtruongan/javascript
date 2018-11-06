@@ -37,4 +37,4 @@
     // 3. if hint is "number" or "default" try obj.valuerOf() and obj.toString() whatever exits
     // it often implement only obj.toString() return "human-readable" for logging or debugging purposes
 
-    /*---[ End note about conversion object ]---*/
+/*---[ End note about conversion object ]---*/
