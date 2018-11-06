@@ -9,3 +9,4 @@ let lader = {
 };
 console.log(lader.up());
 /* ---[ end object this ]--- */
+//commit
