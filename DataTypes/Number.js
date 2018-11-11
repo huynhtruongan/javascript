@@ -125,13 +125,13 @@
 
 /*---| Exercise |---*/
     /*-- sum number from visistor --*/
-    // (function(){
-    //     "use strict";
-    //     let number1 = + prompt(" Nhap first number :", 10);
-    //     let number2 = + prompt(" Nhap sencond number :", 0);
-    //     let result = (number1 + number2 ) * 10 / 10;
-    //     isFinite(number1) && isFinite(number2) && alert(`Result : ${result}`);
-    // })();
+        // (function(){
+        //     "use strict";
+        //     let number1 = + prompt(" Nhap first number :", 10);
+        //     let number2 = + prompt(" Nhap sencond number :", 0);
+        //     let result = (number1 + number2 ) * 10 / 10;
+        //     isFinite(number1) && isFinite(number2) && alert(`Result : ${result}`);
+        // })();
     /*-- 7.35.toFixed(1) == 7.3????? --*/
     (function(){
         "use strict";
@@ -139,21 +139,21 @@
         console.log((7.35 * 10).toFixed(0)/10);
     })();
     /*-- Repeat until input is a number --*/
-    // (function(){
-    //     "use strict";
-    //     let number; // must delare
-    //     loop: do{
-    //         number = prompt(" Enter a valid number : " ,0 );
-    //         console.log(number);
-    //         if(number === null || !isFinite(number) ){
-    //             alert(" return : " + null);
-    //             continue loop;
-    //         }else{
-    //             alert(" return : " + +number);
-    //             break loop;
-    //         }
-    //    }while(number);
-    // })();
+        // (function(){
+        //     "use strict";
+        //     let number; // must delare
+        //     loop: do{
+        //         number = prompt(" Enter a valid number : " ,0 );
+        //         console.log(number);
+        //         if(number === null || !isFinite(number) ){
+        //             alert(" return : " + null);
+        //             continue loop;
+        //         }else{
+        //             alert(" return : " + +number);
+        //             break loop;
+        //         }
+        //    }while(number);
+        // })();
         
          
     
