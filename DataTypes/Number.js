@@ -132,27 +132,28 @@
     //     let result = (number1 + number2 ) * 10 / 10;
     //     isFinite(number1) && isFinite(number2) && alert(`Result : ${result}`);
     // })();
-    /*-- 7.35.toFixed(1) == 6.3????? --*/
+    /*-- 7.35.toFixed(1) == 7.3????? --*/
     (function(){
         "use strict";
-        console.log(Math.round(6.35 * 10)/10);
+        console.log(Math.round(7.35 * 10)/10);
+        console.log((7.35 * 10).toFixed(0)/10);
     })();
     /*-- Repeat until input is a number --*/
-    (function(){
-        "use strict";
-        let number; // must delare
-        loop: do{
-            number = prompt(" Enter a valid number : " ,0 );
-            console.log(number);
-            if(number === null || !isFinite(number) ){
-                alert(" return : " + null);
-                continue loop;
-            }else{
-                alert(" return : " + +number);
-                break loop;
-            }
-       }while(number);
-    })();
+    // (function(){
+    //     "use strict";
+    //     let number; // must delare
+    //     loop: do{
+    //         number = prompt(" Enter a valid number : " ,0 );
+    //         console.log(number);
+    //         if(number === null || !isFinite(number) ){
+    //             alert(" return : " + null);
+    //             continue loop;
+    //         }else{
+    //             alert(" return : " + +number);
+    //             break loop;
+    //         }
+    //    }while(number);
+    // })();
         
          
     
