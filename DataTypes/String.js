@@ -86,7 +86,35 @@
         let howitwork = `how it work`;
         console.log(howitwork.toUpperCase()); // HOW IT WORK
         console.log(howitwork.toUpperCase().toLowerCase()); // how it work
-        
+
+/*---| Searching for a substring |---*/
+    /*-- str.indexOf --*/
+    // return position or -1 if not found
+        (function(){
+            let title = `I'm title`;
+            console.log( title.indexOf(`m`)); // 2
+            console.log( title.indexOf(`Title`)); // -1
+            
+        })();
+    // search start point
+        (function(){
+            let title = `I'm title`;
+            console.log( title.indexOf(`t`));
+            console.log( title.indexOf(`t`, 5));
+        })();
+    /*-- str.lastIndexOf(pos) --*/
+        (function(){
+            let title = `I'm title`;
+            console.log( title.lastIndexOf(`t`));
+        })();
+    /*-- indexOf trick --*/
+    // ~number: - ( number + 1)
+        (function(){
+            `use strict`;
+            let check = "you found me , @@";
+            if(~check.indexOf("me")) console.log(`you found me at ${check.indexOf("me")}`); 
+        })();
+
 
         
         
