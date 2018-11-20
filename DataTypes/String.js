@@ -114,8 +114,37 @@
             let check = "you found me , @@";
             if(~check.indexOf("me")) console.log(`you found me at ${check.indexOf("me")}`); 
         })();
+    /*-- includes --*/
+    // check and return boolen value
+        (function(){
+            `use strict`;
+            let me = `me true or false`;
+            console.log(me.includes(`false`));
+        })();
+    /*-- startsWith , endsWith --*/
+    (function(){
+        `use strict`;
+        let dream = `asd, me said`;
+        console.log(`dream start with :\'${(dream.startsWith(`asd`))&&(`asd`)
+        }\' and end with tell:${dream.endsWith(`tell`)}`);
+    })();
+/*---[ end Searching for a substring ]---*/
 
-
+/*---| Getting a substring |---*/
+    /*-- str.slice(start [, end]) --*/
+    // return part of string not include end
+    (function(){
+        let sunny = `what's the weather like today?`;
+        console.log(sunny.slice(0,sunny.length-1)); // what's the weather like today
+        console.log(sunny.slice(0)); // what's the weather like today?
+        console.log(sunny.slice(0, 1000)); // what's the weather like today?
+        console.log(sunny.slice(400,500)); // empty string
+        console.log(sunny.slice(-4,-2)); // da
+        console.log(sunny.slice(!-2, 4)); // !-2 not supported !-2 treat as 0, it mean (0, 4)
+        console.log(sunny.slice(6, 2)); // empty string
+    })();    
+    /*-- str.substr(start [, length]) --*/
+    // Returns the part of the string from start, with the given length
         
         
         
