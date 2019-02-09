@@ -134,6 +134,7 @@
     /*-- str.slice(start [, end]) --*/
     // return part of string not include end
     (function(){
+        `use strict`;
         let sunny = `what's the weather like today?`;
         console.log(sunny.slice(0,sunny.length-1)); // what's the weather like today
         console.log(sunny.slice(0)); // what's the weather like today?
@@ -145,9 +146,20 @@
     })();    
     /*-- str.substr(start [, length]) --*/
     // Returns the part of the string from start, with the given length
-        
-        
-        
+    (function(){
+        `use strict`;
+        let str = `substring`;
+        console.log( str.substr(2, 6)); // bstrin
+        console.log( str.substr(6, 2)); // in
+    })();
+    /*-- str.substring --*/    
+    // Returns the part of the string from start to before end
+    (function(){
+        `use strict`;
+        let str = `subtring`;
+        console.log( str.substring(2, 6)); // btri
+        console.log( str.substring(2, 6)); // btri
+    })();    
         
         
     
