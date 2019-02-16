@@ -160,15 +160,30 @@
         console.log( str.substring(2, 6)); // btri
         console.log( str.substring(2, 6)); // btri
     })();    
-        
-        
-    
-    
-        
-    
-    
-    
-    
-    
-    
+/*---[ end Getting a substring ]---*/
+/*---| Comparing strings |---*/        
+    // A lowercase letter is always greater than the uppercase
+        console.log('a' > 'A'); // true
+    // Letter with diacritical marks are "out of order"
+        console.log('Öster' > 'zdf'); // true
+    // Returns the code for the character at position pos
+    /*-- str.codePointAt(pos) --*/    
+        console.log( 'zab'.codePointAt(0) ); //122
+        console.log( 'zab'.codePointAt(1) ); //97
+    // Create a character by its by numeric code    
+    /*-- String.fromCodePoint(code) --*/
+        console.log( String.fromCodePoint(122) ); // z
+    // We also add unicode character by their codes using \u followed by the hex code    
+    /*-- \u --*/
+        console.log('\u005a'); // Z
+    // see the character from 65 to 220    
+        (function(){
+            `use strict`;
+            let str = '';
+            for (let i = 65; i <= 220; i++){
+                str += String.fromCodePoint(i);
+            }
+            console.log(str);
+            
+        })();
     
