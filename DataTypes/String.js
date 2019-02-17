@@ -188,4 +188,79 @@
                                 // ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜ
             
         })();
-    
+    // Specical method to compare strings in different languages
+    /*-- str.logcaleCompare(str2) --*/
+    // str > str2 => 1 && str < str2 => -1 && equal => 0
+        console.log( 'Österreich'.localeCompare('Zealand') ); // -1
+    /*---| Internals, Unicode |---*/
+    /*-- surrogate pairs --*/
+    // Most symbol have a 2-byte code
+    // The length of such symbol is 2
+        console.log('𝒳'[0]);
+        console.log('𝒳'[1]);
+        console.log('𝒳'.length); // 2
+    /*-- Diacritical marks and normalization --*/
+        console.log('S\u0307\u0323'); // S + dot above + dot below
+        console.log('S\u0323\u0307'); // S + do below + dot above
+        console.log( 'S\u0307\u0323' === 'S\u0323\u0307'); // fale
+        console.log( 'S\u0307\u0323'.localeCompare('S\u0323\u0307') ); // 0
+    // to solve this, there exists a "unicode normalization" algorithm that brings each string to single "normal" form
+    /*-- str.normalize() --*/
+    console.log( 'S\u0307\u0323'.normalize().length ); //1
+    console.log( 'S\u0307\u0323'.normalize() === 'S\u0323\u0307'.normalize() ); //true
+    // link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String 
+    /*---[ end Internals, Unicode ]---*/
+    /*---| Pratice |---*/
+    /*-- Upercase the first character --*/
+    (function(){
+        `use strict`;
+        const ucfirst = (x) =>{
+             if(!x) return x;
+             return x[0].toUpperCase() + x.slice(1)  
+        };
+        console.log(ucfirst('an') == 'An'); // true
+        console.log(ucfirst(''));
+
+    })();
+    /*-- Check for spam --*/
+    (function(){
+        `use strict`;
+        // const checkSpam = (x) => {
+        //     if(!x) return false;
+        //     else if( x.toLowerCase().includes('viagra') || x.toLowerCase().includes('xxx') ) return true;
+        //     else return false;
+        // };
+        const checkSpam = (x) => {
+           return (!x)? false : (x.toLowerCase().includes('viagra') || x.toLowerCase().includes('xxx')) ? true : false;
+        }
+        console.log(checkSpam('buy ViAgRA now'));
+        console.log( checkSpam('') );
+        console.log( checkSpam('XXXXX') );
+        console.log( checkSpam('𝒳𝒳𝒳𝒳𝒳'));
+ 
+    })();
+    /*-- Truncate the text --*/
+    (function(){
+        `use strict`;
+        const truncate = (str, maxlength) => {
+            // if(!str || !maxlength) return 'Please enter string or max length';
+            // else if(str.length > maxlength) return str.substr(0, maxlength-1) + '...';
+            // else return str;
+            return (!str || !maxlength) ? 'Please enter string or max length' : (str.length > maxlength) ? str.substr(0, maxlength-1) + '...' : str;
+        };
+        console.log(truncate("What I'd like to tell on this topic is:", 20));
+        console.log(truncate('as asd afdfdf ', 0));
+    })();
+    /*-- Extract number --*/
+    (function(){
+        `use strict`;
+        const extractNumber = (str) => {
+            let num = '';
+            for(let char of str) {
+                if( isFinite(char) ) num += char;
+            }
+            return parseInt(num);
+        };
+        console.log(extractNumber('123asd6456'));
+        
+    })();

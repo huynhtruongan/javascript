@@ -158,7 +158,7 @@
         (function(){
             "use strict";
            let Random =(min, max) => min + Math.random() * (max - min);
-             alert(Random(2, 3));
+                console.log(Random(2, 3));
         })();
     /*-- Random integer from min to max --*/
         (function(){
