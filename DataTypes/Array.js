@@ -44,7 +44,61 @@
 /*---[ end Methods that work with the beginning of the array ]---*/
 /*---| Internals |---*/    
     // it is coppied by reference
-    arrEmpty = fruits;
-    console.log( fruits === arrEmpty );
-    console.log( arrEmpty );
-    //push,pop is fast and shift, unshift is low
+        arrEmpty = fruits;
+        console.log( fruits === arrEmpty );
+        arrEmpty.push(`Pecan`);
+        console.log( fruits );
+
+/*---[ end Internals ]---*/
+/*---| Performance |---*/
+    // push,pop is fast and shift, unshift is low
+/*---[ end Performance ]---*/
+/*---| Loops |---*/
+    // for (...of...){}
+        for ( let fruit of fruits){ console.log( fruit ); }
+    // doesn't give access to the number if the current element
+    // it is also possible to use for ... in but it is bad way
+    // for in iterates over all properties, not only numberic ones
+    // for in loop is lower 10-100 times
+        for( let key in fruits){ console.log( fruits[key]); }
+/*---[ end Loops ]---*/
+/*---| length |---*/
+    // length truncate
+    // clear num by num.length = 0;
+        let num = [1, 2, 3, 4, 5];
+        num.length = 2;
+        console.log( num );
+        num.length = 0;
+        console.log( num );
+/*---[ end length ]---*/        
+/*---| new Array() |---*/
+        let mama = new Array('asd ', 'asdgf', 'qwe');
+    // or []
+        let ff = ['fds', 'qwe', 'adasd'];
+        console.log( mama + ff);
+    // or new Array(number of element)    
+        let sss = new Array(3);
+        console.log( sss.length );
+/*---[ end new Array() ]---*/        
+/*---| Multidimensional arrays |---*/
+        let matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        console.log( matrix[1][2] );
+/*---[ end Multidimensional arrays ]---*/        
+/*---| String(arr) |---*/
+        num = [1, 2, 3];
+        console.log( num );
+        console.log( String(num) );
+    // also try it     
+        console.log( [] + 1);
+        console.log( [1] + 1);
+        console.log( [1, 2] + 1);
+/*---[ end String(arr) ]---*/        
+
+        
+        
+        
+        
