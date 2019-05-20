@@ -88,17 +88,52 @@
         ];
         console.log( matrix[1][2] );
 /*---[ end Multidimensional arrays ]---*/        
-/*---| String(arr) |---*/
+/*---| toString(arr) |---*/
         num = [1, 2, 3];
         console.log( num );
         console.log( String(num) );
     // also try it     
-        console.log( [] + 1);
-        console.log( [1] + 1);
-        console.log( [1, 2] + 1);
-/*---[ end String(arr) ]---*/        
+        console.log( [] + 1);// "1"
+        console.log( [1] + 1);// "11"
+        console.log( [1, 2] + 1);// "1,21"
 
+        console.log( "" + 1);// "1"
+        console.log( "1" + 1);// "11"
+        console.log( "1, 2" + 1);// "1,21"
+/*---[ end toString(arr) ]---*/        
+/*---| Exercise |---*/
+    /*-- Exercise 1 --*/
+    (function(){
+        `use strict`;
+        let fruits = ["Apple", "Pear", "Orange"];
+        let shoppingCart = fruits;
+        shoppingCart.push("Banana");
+        console.log(fruits.length);// 4 , because arrays are objects. So both reference to the same array
+    })();
+    /*-- Exercise 2 --*/
+    // Let’s try 5 array operations.
+
+    // Create an array styles with items “Jazz” and “Blues”.
+    // Append “Rock-n-Roll” to the end.
+    // Replace the value in the middle by “Classics”. Your code for finding the middle value should work for any arrays with odd length.
+    // Strip off the first value of the array and show it.
+    // Prepend Rap and Reggae to the array.
+    (function(){
+        `use strict`;
+        let styles = ["Jazz", "Blues"];
+        styles.push("Rock-n-Roll");
+        console.log(styles);
+        let middle = Math.floor(styles.length/2);
+        console.log(middle);
         
+        styles[middle] = "Classics";
+        console.log(styles);
+        console.log(styles.shift());
+        styles.unshift("Rap", "Reggae");
+        console.log(styles);
+    })();
+/*---[ end  ]---*/
+
         
         
         

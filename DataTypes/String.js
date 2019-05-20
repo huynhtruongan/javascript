@@ -25,9 +25,9 @@
             
                 let str0 = strings[0];
                 let str1 = strings[1];
-                let str3 = strings[2];
+                let str2 = strings[2];
 
-                return `${str0}${a}${str1}${b}${str3}${a + b}`;
+                return `${str0}${a}${str1}${b}${str2}${a + b}`;
             }
             let output = Sum`tong ${a} voi ${b} la `;
             console.log(output);
