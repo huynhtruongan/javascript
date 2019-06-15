@@ -1,4 +1,4 @@
-/*---| Regular syntax |---*/
+/*---| TODO:Regular syntax |---*/
     //name with First capital letter
 function User(name) {
     //this = {};
@@ -29,7 +29,7 @@ let admin = new function(){
 
 /*---[ End  Regular syntax ]---*/
 
-/*---| Dual-syntax Constructors: new.target |---*/
+/*---| TODO:Dual-syntax Constructors: new.target |---*/
 
 function Mom(name){
     // You call me without new
@@ -71,7 +71,7 @@ let brother = new SmallUser; // we can omit parentheses after new if it has not 
 
 /*---[ End Return constructor ]---*/
 
-/*---| Methods in constructor |---*/
+/*---| TODO:Methods in constructor |---*/
 
 function Heo(name) {
     
@@ -93,7 +93,7 @@ let mori = new Heo("Mori");
 
 /*---[ End Note ]---*/
 
-/*---| Example |---*/
+/*---| TODO:Example |---*/
 	/*-- exp1 --*/
         // both two constructor returm one object
         // them equals

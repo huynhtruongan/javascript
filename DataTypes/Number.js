@@ -1,5 +1,6 @@
 // all number in javascript are stored in 64-bit format('double precision')
-/*---| more way to write a number |---*/
+
+/*---| TODO:More way to write a number |---*/
 	/*-- Exponentiation --*/
     let num  = 1e6; // e6 = six zero
     console.log(num); // 1000000
@@ -13,7 +14,7 @@
     console.log(`${num} : ${hex} : ${binary} : ${octal}`);
 /*---[ end more way to write a number]---*/
 
-/*---| toString() |---*/
+/*---| TODO:toString() |---*/
     /*-- Syntax --*/
     // num.toString( Base);
     // or 1234..toString( Base);
@@ -32,7 +33,7 @@
             console.log(example.toString(36)); // 73
 /*---[ end toString() ]---*/                
 
-/*---| rounding |---*/
+/*---| TODO:rounding |---*/
     /*-- Math.floor --*/
         console.log(Math.floor(3.9)); // 3, round down
     /*-- Math.ceil --*/
@@ -51,7 +52,7 @@
         console.log(typeof(123.17893.toFixed(1))); // string
 /*---[ end rounding ]---*/ 
         
-/*---| Imprecise calculations |---*/
+/*---| TODO:Imprecise calculations |---*/
     // if a number too big, it giving an infinity
     console.log(1e500); // Infinity
     console.log(9999999999999999); // 10000000000000000 - 16 digits or greater
@@ -88,7 +89,7 @@
         console.log(Object.is(0, -0)); // false
  /*---[ end Imprecise calculations ]---*/
 
- /*---| ParseInt and parseFloat |---*/
+ /*---| TODO:ParseInt and parseFloat |---*/
         // Numberic convertions using + or Number() are strict . 
         console.log(+ "100px"); // NaN
         // But parseInt and parseFloat can do that
@@ -107,7 +108,7 @@
         console.log(parseInt("ff", 16)); //255 - it works without 0x
 /*---[ end ParseInt and parseFloat ]---*/
 
-/*---| Other Math function |---*/
+/*---| TODO:Other Math function |---*/
     /*-- Math.random --*/
         // returns a random number from 0 to < 1 
         console.log(Math.random()); // any number from 0 to < 1
@@ -123,7 +124,7 @@
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
 /*---[ end Other Math function ]---*/        
 
-/*---| Exercise |---*/
+/*---| TODO:Exercise |---*/
     /*-- sum number from visistor --*/
         // (function(){
         //     "use strict";
