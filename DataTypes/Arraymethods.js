@@ -172,12 +172,56 @@
             
         })();
     /*-- split and join --*/
-        // Situation from real life : John, Anna, Petter. how to convert it to an array?
-        let items = "John, Anna, Petter";
-        // Syntax
-        let arrAfterSplit = items.split(', ');
-        console.log(arrAfterSplit); // [ 'John', 'Anna', 'Petter' ]
-        let arrAfterSplitLimmitLenght = items.split(', ', 2); // add lenght limmit is 2
-        console.log(arrAfterSplitLimmitLenght); // [ 'John', 'Anna' ]
-        
+        // TODO:split
+            // Situation from real life : John, Anna, Petter. how to convert it to an array?
+            let items = "John, Anna, Petter";
+            // Syntax
+            let arrAfterSplit = items.split(', ');
+            // Instance
+            console.log(arrAfterSplit); // [ 'John', 'Anna', 'Petter' ]
+            let arrAfterSplitLimmitLenght = items.split(', ', 2); // add lenght limmit is 2
+            console.log(arrAfterSplitLimmitLenght); // [ 'John', 'Anna' ]
+            // split into letters
+            // The call to split(s) with an empty s would split the string into an array of letters
+            let letterSplit = "test";
+            console.log(letterSplit.split(''));
+            // if empty , add item to an array
+            console.log(letterSplit.split());
+        // TODO: join
+            // reverse to split. It creates a string of arr items glued by separator between them
+            //Syntax and Instance
+            let strAfterJoin = arrAfterSplit.join('; ');
+            console.log(strAfterJoin);
+        // TODO: reduce/reduceTight
+            // iterate and caculate to a single value base on the array
+            // Syntax
+            // let value = arr.reduce(function(previousValue, item, index, array){
+                   
+            // }, initial);
+            (function(){
+                `use strict`;
+                let arr = [1, 2, 3, 4, 5];
+                let result = arr.reduce((sum, current)=> sum + current, 100);
+                console.log(result); // 115
+                // initial sum = 100;
+                // iterate and sum += current;
+                let resultOmitInitial = arr.reduce((sum, current)=> sum + current);
+                console.log(resultOmitInitial); // 15
+                // if omit initial , method take first element of the array as the initial value
+                // and start iteration from the 2nd element
+                // if array is empty , the method call without initial value give and error
+
+            })();
+                //  reduceRight doses the same but goses from right to left
 /*---[ end Transform an array ]---*/
+/*---| TODO: Array.isArray |---*/
+    // Array form base on object
+    // typeof dose not help distinguish a plain object from an array
+    console.log(typeof{} === typeof[]); // true
+    // but array are used so often that there's a special method for that Array.isArray(value)
+    // it return true if the value is an array, and false otherwise
+    console.log(Array.isArray({})===Array.isArray([])); // false
+/*---[ end Array.isArray ]---*/
+/*---| TODO: MOst methods support "thisArg" |---*/
+    
+/*---[ end MOst methods support "thisArg" ]---*/
