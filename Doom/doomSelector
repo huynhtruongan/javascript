@@ -1,10 +1,11 @@
+TODO: Top Doom selector 
  getElementByid()             id                  -               -
  getElementsbyClassName()     class               live            can call on an element
  getElementsByTagName()       tag or '*'          live            can call on an element
  getElementsByName()          name                live            -
  querySelector()              css-selector        -               can call on an element
  querySelectorAll()           css-selector        -               can call on an element
-
+FIXME: Add define for three methods 
  elem.matches(css)
  elem.closest(css)
 
