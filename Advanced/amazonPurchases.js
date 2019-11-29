@@ -6,6 +6,7 @@ const user = {
     purchases: []
   }
   
+  const amazonHistory = [];
   const items = [{name: "laptop", price: 3000},{name: "mouse", price: "500"}];
   // NOTE: addItemToCart is wrapper function when we use pipe 
   function addItemToCart(user, items){
@@ -25,6 +26,7 @@ const user = {
   }
 
   function buyItem(user){
+    amazonHistory.push(user);
     let updatePurchase = user.purchases.concat(user.cart);
     return Object.assign({}, user , {purchases: updatePurchase})
   }
@@ -35,17 +37,19 @@ const user = {
   }
   // NOTE: we use pipe because this is simple way to execute
   const pipe = (f, g) => (...data) => g(f(...data));
-  
+  const compose = (f, g) => (...data) => f(g(data));
   //Implement a cart feature:
   // 1. Add items to cart.
   // 2. Add 3% tax to item in cart
   // 3. Buy item: cart --> purchases
   // 4. Empty cart
+
   // REF: reduce receive callback pipe()
   function main(...fns) {return fns.reduce(pipe)};
-  
+  // function main(...fns) {return fns.reduce(compose)};
   
   main(addItemToCart, addTax, buyItem, emptyCart)(user, items);
+  //main(emptyCart, buyItem,addTax,addItemToCart)(user, items);
   
   //Bonus:
   // accept refunds.
