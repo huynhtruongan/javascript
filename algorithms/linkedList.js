@@ -116,12 +116,30 @@ class LinkedList{
         return this
     }
     reverseLinkedList(){
+        if(!this.head.next){
+            return this.head
+        }
         // input linKedList
         // output linkKedList
-       
+        let first = this.head;
+        this.tail = this.head;
+        let second = this.head.next;
+        while(second){
+            // console.log('first- second', first, second);
+            // console.log('head-head.next', this.head, this.head.next);
+            let temp = second.next;
+            // console.log('temp',temp);
+            second.next = first;
+            first = second;
+            second = temp;
+           return this
+        }
+        this.head.next = null;
+        this.head = first;
+        // see recursion https://www.geeksforgeeks.org/reverse-a-linked-list/
     }
 }
-// 99-->1-->10-->5-->16-->1000
+// 99-->1-->10-->200-->5-->11-->16-->1000
 const myLinkList = new LinkedList(10);
 myLinkList.append(5);
 myLinkList.append(16);
@@ -130,9 +148,9 @@ myLinkList.insert(2,11);
 myLinkList.insert(1,200);
 myLinkList.insert(-2,99);
 myLinkList.insert(15,1000);
-myLinkList.remove(3);
-myLinkList.remove(-1);
-myLinkList.remove(2000);
+// myLinkList.remove(3);
+// myLinkList.remove(-1);
+// myLinkList.remove(2000);
 myLinkList.reverseLinkedList()
 
 

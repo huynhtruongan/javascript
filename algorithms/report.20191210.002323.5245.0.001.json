@@ -3,14 +3,14 @@
   "header": {
     "event": "Allocation failed - JavaScript heap out of memory",
     "trigger": "FatalError",
-    "filename": "report.20191207.132303.9681.0.001.json",
-    "dumpEventTime": "2019-12-07T13:23:03Z",
-    "dumpEventTimeStamp": "1575699783357",
-    "processId": 9681,
+    "filename": "report.20191210.002323.5245.0.001.json",
+    "dumpEventTime": "2019-12-10T00:23:23Z",
+    "dumpEventTimeStamp": "1575912203340",
+    "processId": 5245,
     "cwd": "/home/ankien/CODE/javascript/algorithms",
     "commandLine": [
       "node",
-      "linkList.js"
+      "linkedList.js"
     ],
     "nodejsVersion": "v12.4.0",
     "glibcVersionRuntime": "2.27",
@@ -96,10 +96,10 @@
     }
   ],
   "javascriptHeap": {
-    "totalMemory": 2725298176,
-    "totalCommittedMemory": 2691229736,
-    "usedMemory": 2688540568,
-    "availableMemory": 17259496,
+    "totalMemory": 2724773888,
+    "totalCommittedMemory": 2691180272,
+    "usedMemory": 2688548304,
+    "availableMemory": 18500872,
     "memoryLimit": 2197815296,
     "heapSpaces": {
       "read_only_space": {
@@ -111,30 +111,30 @@
       },
       "new_space": {
         "memorySize": 33554432,
-        "committedMemory": 2051384,
+        "committedMemory": 2082816,
         "capacity": 16767232,
         "used": 0,
         "available": 16767232
       },
       "old_space": {
-        "memorySize": 3268608,
-        "committedMemory": 1952504,
-        "capacity": 1493096,
-        "used": 1493096,
-        "available": 0
+        "memorySize": 2744320,
+        "committedMemory": 1870648,
+        "capacity": 2741248,
+        "used": 1499872,
+        "available": 1241376
       },
       "code_space": {
         "memorySize": 688128,
-        "committedMemory": 175424,
-        "capacity": 155584,
-        "used": 155584,
+        "committedMemory": 175744,
+        "capacity": 155904,
+        "used": 155904,
         "available": 0
       },
       "map_space": {
         "memorySize": 528384,
-        "committedMemory": 284064,
-        "capacity": 194320,
-        "used": 194320,
+        "committedMemory": 284704,
+        "capacity": 194960,
+        "used": 194960,
         "available": 0
       },
       "large_object_space": {
@@ -161,25 +161,25 @@
     }
   },
   "resourceUsage": {
-    "userCpuSeconds": 1.57715,
-    "kernelCpuSeconds": 0.638081,
-    "cpuConsumptionPercent": 110.761,
-    "maxRss": 2721873920,
+    "userCpuSeconds": 1.58682,
+    "kernelCpuSeconds": 0.555387,
+    "cpuConsumptionPercent": 214.221,
+    "maxRss": 2720788480,
     "pageFaults": {
-      "IORequired": 21,
-      "IONotRequired": 663255
+      "IORequired": 0,
+      "IONotRequired": 663295
     },
     "fsActivity": {
-      "reads": 2384,
+      "reads": 0,
       "writes": 0
     }
   },
   "uvthreadResourceUsage": {
-    "userCpuSeconds": 1.39698,
-    "kernelCpuSeconds": 0.636446,
-    "cpuConsumptionPercent": 101.671,
+    "userCpuSeconds": 1.41757,
+    "kernelCpuSeconds": 0.551057,
+    "cpuConsumptionPercent": 196.863,
     "fsActivity": {
-      "reads": 2384,
+      "reads": 0,
       "writes": 0
     }
   },
@@ -199,7 +199,7 @@
     "GNOME_SHELL_SESSION_MODE": "ubuntu",
     "COLORTERM": "truecolor",
     "NVM_CD_FLAGS": "",
-    "DESKTOP_AUTOSTART_ID": "10a57ffcf8236404d4157568908396722100000021120007",
+    "DESKTOP_AUTOSTART_ID": "105845e00e735d5e3f157593672637767100000025520007",
     "USERNAME": "ankien",
     "XDG_VTNR": "2",
     "SSH_AUTH_SOCK": "/run/user/1000/keyring/ssh",
@@ -209,11 +209,11 @@
     "DESKTOP_SESSION": "ubuntu",
     "QT4_IM_MODULE": "xim",
     "TEXTDOMAINDIR": "/usr/share/locale/",
-    "GNOME_TERMINAL_SCREEN": "/org/gnome/Terminal/screen/dc964ad6_f0bf_48b1_8912_dd5ec6dbfaf7",
+    "GNOME_TERMINAL_SCREEN": "/org/gnome/Terminal/screen/ee6a13ba_030e_46a4_9031_4408faa5742d",
     "PWD": "/home/ankien/CODE/javascript/algorithms",
     "HOME": "/home/ankien",
     "TEXTDOMAIN": "im-config",
-    "SSH_AGENT_PID": "2189",
+    "SSH_AGENT_PID": "2629",
     "QT_ACCESSIBILITY": "1",
     "XDG_SESSION_TYPE": "x11",
     "XDG_DATA_DIRS": "/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop",
@@ -232,7 +232,7 @@
     "NVM_BIN": "/home/ankien/.nvm/versions/node/v12.4.0/bin",
     "XDG_CURRENT_DESKTOP": "ubuntu:GNOME",
     "GPG_AGENT_INFO": "/run/user/1000/gnupg/S.gpg-agent:0:1",
-    "GNOME_TERMINAL_SERVICE": ":1.127",
+    "GNOME_TERMINAL_SERVICE": ":1.121",
     "XDG_SEAT": "seat0",
     "SHLVL": "1",
     "LC_TELEPHONE": "en_US.UTF-8",
@@ -245,7 +245,7 @@
     "XDG_CONFIG_DIRS": "/etc/xdg/xdg-ubuntu:/etc/xdg",
     "PATH": "/home/ankien/.nvm/versions/node/v12.4.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
     "LC_IDENTIFICATION": "en_US.UTF-8",
-    "SESSION_MANAGER": "local/AnKien:@/tmp/.ICE-unix/2112,unix/AnKien:/tmp/.ICE-unix/2112",
+    "SESSION_MANAGER": "local/AnKien:@/tmp/.ICE-unix/2552,unix/AnKien:/tmp/.ICE-unix/2552",
     "LESSOPEN": "| /usr/bin/lesspipe %s",
     "GTK_IM_MODULE": "ibus",
     "LC_TIME": "en_US.UTF-8",

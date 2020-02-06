@@ -134,6 +134,25 @@ class DoublelyLinkedList{
         this.length--;
         return this
     }
+    reverse(){
+        if(!this.head.next) return this.head;
+
+        let first = this.head;
+        this.tail = this.head;
+        
+        let second = this.head.next;
+        while(second){
+            let temp = second.next;
+            second.next = first;
+            second.prev = temp;
+            first.prev = second;
+            first = second;
+            second = temp;
+        }
+        this.head.next = null;
+        this.head = first;
+        return this
+    }
     
 }
 // 99-->1-->10-->5-->16-->1000
@@ -145,10 +164,10 @@ myLinkList.insert(2,11);
 myLinkList.insert(1,200);
 myLinkList.insert(-2,99);
 myLinkList.insert(15,1000);
-myLinkList.remove(3);
-myLinkList.remove(-1);
-myLinkList.remove(2000);
-
+// myLinkList.remove(3);
+// myLinkList.remove(-1);
+// myLinkList.remove(2000);
+myLinkList.reverse();
 
 
 
